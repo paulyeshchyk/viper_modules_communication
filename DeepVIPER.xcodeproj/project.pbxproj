@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D7BFD841CA024380070F83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFD831CA024380070F83E /* AppDelegate.swift */; };
+		1D7BFD8B1CA024380070F83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D7BFD8A1CA024380070F83E /* Assets.xcassets */; };
+		1D7BFD8E1CA024380070F83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D7BFD8C1CA024380070F83E /* LaunchScreen.storyboard */; };
+		1D7BFD991CA024380070F83E /* DeepVIPERTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFD981CA024380070F83E /* DeepVIPERTests.swift */; };
+		1D7BFDA41CA024380070F83E /* DeepVIPERUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDA31CA024380070F83E /* DeepVIPERUITests.swift */; };
+		1D7BFDD01CA02D870070F83E /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDCF1CA02D870070F83E /* ListPresenter.swift */; };
+		1D7BFDD31CA02D980070F83E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDD11CA02D980070F83E /* ListViewController.swift */; };
+		1D7BFDD41CA02D980070F83E /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7BFDD21CA02D980070F83E /* ListViewController.xib */; };
+		1D7BFDD61CA02DAB0070F83E /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDD51CA02DAB0070F83E /* ListInteractor.swift */; };
+		1D7BFDD81CA02DB90070F83E /* ListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDD71CA02DB90070F83E /* ListDataManager.swift */; };
+		1D7BFDDA1CA02DD10070F83E /* ListPONSO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDD91CA02DD10070F83E /* ListPONSO.swift */; };
+		1D7BFDDC1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDDB1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift */; };
+		1D7BFDDE1CA02EDC0070F83E /* DeepVIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */; };
+		1D7BFDE11CA109610070F83E /* ListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE01CA109610070F83E /* ListModule.swift */; };
+		1D7BFDE41CA10B1E0070F83E /* AddDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */; };
+		1D7BFDE61CA10B430070F83E /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE51CA10B430070F83E /* ListProtocols.swift */; };
+		1D7BFDE81CA10B7E0070F83E /* AddDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */; };
+		1D7BFDEA1CA10CBF0070F83E /* AddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */; };
+		1D7BFDEC1CA10CC90070F83E /* AddDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */; };
+		1D7BFDEE1CA10CF00070F83E /* AddDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */; };
+		1D7BFDF01CA10D0E0070F83E /* AddDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */; };
+		1D8CDEBA1CA13C9D009AD39B /* EmptyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEB81CA13C9D009AD39B /* EmptyDetailViewController.swift */; };
+		1D8CDEBB1CA13C9D009AD39B /* EmptyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CDEB91CA13C9D009AD39B /* EmptyDetailViewController.xib */; };
+		1D8CDEBE1CA13D69009AD39B /* EmptyDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEBD1CA13D69009AD39B /* EmptyDetailModule.swift */; };
+		1D8CDEC01CA13D7F009AD39B /* EmptyDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEBF1CA13D7F009AD39B /* EmptyDetailProtocols.swift */; };
+		1D8CDEC21CA13E6B009AD39B /* EmptyDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC11CA13E6B009AD39B /* EmptyDetailPresenter.swift */; };
+		1D8CDEC51CA13FFC009AD39B /* EmptyDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */; };
+		1D8CDEC71CA169C1009AD39B /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC61CA169C1009AD39B /* ListTableViewCell.swift */; };
+		1D8CDEC91CA169CC009AD39B /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC81CA169CC009AD39B /* ListTableViewCell.xib */; };
+		1DE5075F1CA119C600066311 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5075E1CA119C600066311 /* SplitViewController.swift */; };
+		1DE507611CA119E200066311 /* DeepVIPERWireframeIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507601CA119E200066311 /* DeepVIPERWireframeIPad.swift */; };
+		1DE507631CA11A7400066311 /* DeepVIPERWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507621CA11A7400066311 /* DeepVIPERWireframe.swift */; };
+		1DE507651CA11AFB00066311 /* SplitModuleProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507641CA11AFB00066311 /* SplitModuleProtocols.swift */; };
+		1DE507681CA11B6F00066311 /* SplitModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507671CA11B6F00066311 /* SplitModule.swift */; };
+		1DE5076A1CA11BBC00066311 /* SplitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507691CA11BBC00066311 /* SplitPresenter.swift */; };
+		1DE5076C1CA11C8B00066311 /* SplitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5076B1CA11C8B00066311 /* SplitInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D7BFD951CA024380070F83E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7BFD781CA024380070F83E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D7BFD7F1CA024380070F83E;
+			remoteInfo = DeepVIPER;
+		};
+		1D7BFDA01CA024380070F83E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D7BFD781CA024380070F83E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D7BFD7F1CA024380070F83E;
+			remoteInfo = DeepVIPER;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D7BFD801CA024380070F83E /* DeepVIPER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepVIPER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7BFD831CA024380070F83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D7BFD8A1CA024380070F83E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D7BFD8D1CA024380070F83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D7BFD8F1CA024380070F83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7BFD941CA024380070F83E /* DeepVIPERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepVIPERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7BFD981CA024380070F83E /* DeepVIPERTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepVIPERTests.swift; sourceTree = "<group>"; };
+		1D7BFD9A1CA024380070F83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7BFD9F1CA024380070F83E /* DeepVIPERUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeepVIPERUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7BFDA31CA024380070F83E /* DeepVIPERUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepVIPERUITests.swift; sourceTree = "<group>"; };
+		1D7BFDA51CA024380070F83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D7BFDCF1CA02D870070F83E /* ListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		1D7BFDD11CA02D980070F83E /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1D7BFDD21CA02D980070F83E /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		1D7BFDD51CA02DAB0070F83E /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		1D7BFDD71CA02DB90070F83E /* ListDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDataManager.swift; sourceTree = "<group>"; };
+		1D7BFDD91CA02DD10070F83E /* ListPONSO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListPONSO.swift; sourceTree = "<group>"; };
+		1D7BFDDB1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframeIPhone.swift; sourceTree = "<group>"; };
+		1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERProtocols.swift; sourceTree = "<group>"; };
+		1D7BFDE01CA109610070F83E /* ListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModule.swift; sourceTree = "<group>"; };
+		1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailModule.swift; sourceTree = "<group>"; };
+		1D7BFDE51CA10B430070F83E /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
+		1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailProtocols.swift; sourceTree = "<group>"; };
+		1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailViewController.swift; sourceTree = "<group>"; };
+		1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDetailViewController.xib; sourceTree = "<group>"; };
+		1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailPresenter.swift; sourceTree = "<group>"; };
+		1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailInteractor.swift; sourceTree = "<group>"; };
+		1D8CDEB81CA13C9D009AD39B /* EmptyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailViewController.swift; sourceTree = "<group>"; };
+		1D8CDEB91CA13C9D009AD39B /* EmptyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyDetailViewController.xib; sourceTree = "<group>"; };
+		1D8CDEBD1CA13D69009AD39B /* EmptyDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailModule.swift; sourceTree = "<group>"; };
+		1D8CDEBF1CA13D7F009AD39B /* EmptyDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailProtocols.swift; sourceTree = "<group>"; };
+		1D8CDEC11CA13E6B009AD39B /* EmptyDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailPresenter.swift; sourceTree = "<group>"; };
+		1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailInteractor.swift; sourceTree = "<group>"; };
+		1D8CDEC61CA169C1009AD39B /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		1D8CDEC81CA169CC009AD39B /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		1DE5075E1CA119C600066311 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		1DE507601CA119E200066311 /* DeepVIPERWireframeIPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframeIPad.swift; sourceTree = "<group>"; };
+		1DE507621CA11A7400066311 /* DeepVIPERWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframe.swift; sourceTree = "<group>"; };
+		1DE507641CA11AFB00066311 /* SplitModuleProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitModuleProtocols.swift; sourceTree = "<group>"; };
+		1DE507671CA11B6F00066311 /* SplitModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitModule.swift; sourceTree = "<group>"; };
+		1DE507691CA11BBC00066311 /* SplitPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitPresenter.swift; sourceTree = "<group>"; };
+		1DE5076B1CA11C8B00066311 /* SplitInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitInteractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D7BFD7D1CA024380070F83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD911CA024380070F83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD9C1CA024380070F83E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D7BFD771CA024380070F83E = {
+			isa = PBXGroup;
+			children = (
+				1D7BFD821CA024380070F83E /* DeepVIPER */,
+				1D7BFD971CA024380070F83E /* DeepVIPERTests */,
+				1D7BFDA21CA024380070F83E /* DeepVIPERUITests */,
+				1D7BFD811CA024380070F83E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D7BFD811CA024380070F83E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFD801CA024380070F83E /* DeepVIPER.app */,
+				1D7BFD941CA024380070F83E /* DeepVIPERTests.xctest */,
+				1D7BFD9F1CA024380070F83E /* DeepVIPERUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D7BFD821CA024380070F83E /* DeepVIPER */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDB11CA02D5E0070F83E /* Modules */,
+				1D7BFD831CA024380070F83E /* AppDelegate.swift */,
+				1DE507601CA119E200066311 /* DeepVIPERWireframeIPad.swift */,
+				1D7BFDDB1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift */,
+				1D7BFD8A1CA024380070F83E /* Assets.xcassets */,
+				1D7BFD8C1CA024380070F83E /* LaunchScreen.storyboard */,
+				1D7BFD8F1CA024380070F83E /* Info.plist */,
+				1DE507621CA11A7400066311 /* DeepVIPERWireframe.swift */,
+			);
+			path = DeepVIPER;
+			sourceTree = "<group>";
+		};
+		1D7BFD971CA024380070F83E /* DeepVIPERTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFD981CA024380070F83E /* DeepVIPERTests.swift */,
+				1D7BFD9A1CA024380070F83E /* Info.plist */,
+			);
+			path = DeepVIPERTests;
+			sourceTree = "<group>";
+		};
+		1D7BFDA21CA024380070F83E /* DeepVIPERUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDA31CA024380070F83E /* DeepVIPERUITests.swift */,
+				1D7BFDA51CA024380070F83E /* Info.plist */,
+			);
+			path = DeepVIPERUITests;
+			sourceTree = "<group>";
+		};
+		1D7BFDB11CA02D5E0070F83E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */,
+				1D8CDEB31CA13C6D009AD39B /* EmptyDetail */,
+				1DE507581CA1196400066311 /* Split */,
+				1D7BFDB21CA02D5E0070F83E /* AddDetail */,
+				1D7BFDBB1CA02D5E0070F83E /* List */,
+				1D7BFDC41CA02D5E0070F83E /* OpenDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1D7BFDB21CA02D5E0070F83E /* AddDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */,
+				1D7BFDB31CA02D5E0070F83E /* Application Logic */,
+				1D7BFDB71CA02D5E0070F83E /* User Interface */,
+			);
+			path = AddDetail;
+			sourceTree = "<group>";
+		};
+		1D7BFDB31CA02D5E0070F83E /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDB41CA02D5E0070F83E /* Interactor */,
+				1D7BFDB51CA02D5E0070F83E /* Manager */,
+				1D7BFDB61CA02D5E0070F83E /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1D7BFDB41CA02D5E0070F83E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1D7BFDB51CA02D5E0070F83E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1D7BFDB61CA02D5E0070F83E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7BFDB71CA02D5E0070F83E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE21CA10B0B0070F83E /* Module */,
+				1D7BFDB81CA02D5E0070F83E /* Presenter */,
+				1D7BFDBA1CA02D5E0070F83E /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1D7BFDB81CA02D5E0070F83E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1D7BFDBA1CA02D5E0070F83E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */,
+				1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D7BFDBB1CA02D5E0070F83E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE51CA10B430070F83E /* ListProtocols.swift */,
+				1D7BFDBC1CA02D5E0070F83E /* Application Logic */,
+				1D7BFDC01CA02D5E0070F83E /* User Interface */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		1D7BFDBC1CA02D5E0070F83E /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDBD1CA02D5E0070F83E /* Interactor */,
+				1D7BFDBE1CA02D5E0070F83E /* Manager */,
+				1D7BFDBF1CA02D5E0070F83E /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1D7BFDBD1CA02D5E0070F83E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDD51CA02DAB0070F83E /* ListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1D7BFDBE1CA02D5E0070F83E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDD71CA02DB90070F83E /* ListDataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1D7BFDBF1CA02D5E0070F83E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDD91CA02DD10070F83E /* ListPONSO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7BFDC01CA02D5E0070F83E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDDF1CA109610070F83E /* Module */,
+				1D7BFDC11CA02D5E0070F83E /* Presenter */,
+				1D7BFDC31CA02D5E0070F83E /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1D7BFDC11CA02D5E0070F83E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDCF1CA02D870070F83E /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1D7BFDC31CA02D5E0070F83E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDD11CA02D980070F83E /* ListViewController.swift */,
+				1D7BFDD21CA02D980070F83E /* ListViewController.xib */,
+				1D8CDEC61CA169C1009AD39B /* ListTableViewCell.swift */,
+				1D8CDEC81CA169CC009AD39B /* ListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D7BFDC41CA02D5E0070F83E /* OpenDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDC51CA02D5E0070F83E /* Application Logic */,
+				1D7BFDC91CA02D5E0070F83E /* User Interface */,
+			);
+			path = OpenDetail;
+			sourceTree = "<group>";
+		};
+		1D7BFDC51CA02D5E0070F83E /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDC61CA02D5E0070F83E /* Interactor */,
+				1D7BFDC71CA02D5E0070F83E /* Manager */,
+				1D7BFDC81CA02D5E0070F83E /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1D7BFDC61CA02D5E0070F83E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1D7BFDC71CA02D5E0070F83E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1D7BFDC81CA02D5E0070F83E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7BFDC91CA02D5E0070F83E /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDCA1CA02D5E0070F83E /* Presenter */,
+				1D7BFDCB1CA02D5E0070F83E /* Router */,
+				1D7BFDCC1CA02D5E0070F83E /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1D7BFDCA1CA02D5E0070F83E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1D7BFDCB1CA02D5E0070F83E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1D7BFDCC1CA02D5E0070F83E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D7BFDDF1CA109610070F83E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE01CA109610070F83E /* ListModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		1D7BFDE21CA10B0B0070F83E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		1D8CDEB31CA13C6D009AD39B /* EmptyDetail */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEBF1CA13D7F009AD39B /* EmptyDetailProtocols.swift */,
+				1D8CDEB41CA13C6D009AD39B /* Application Logic */,
+				1D8CDEB51CA13C6D009AD39B /* User Interface */,
+			);
+			path = EmptyDetail;
+			sourceTree = "<group>";
+		};
+		1D8CDEB41CA13C6D009AD39B /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEC31CA13FEF009AD39B /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1D8CDEB51CA13C6D009AD39B /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEBC1CA13D53009AD39B /* Module */,
+				1D8CDEB61CA13C88009AD39B /* Presenter */,
+				1D8CDEB71CA13C88009AD39B /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1D8CDEB61CA13C88009AD39B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEC11CA13E6B009AD39B /* EmptyDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1D8CDEB71CA13C88009AD39B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEB81CA13C9D009AD39B /* EmptyDetailViewController.swift */,
+				1D8CDEB91CA13C9D009AD39B /* EmptyDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1D8CDEBC1CA13D53009AD39B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEBD1CA13D69009AD39B /* EmptyDetailModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		1D8CDEC31CA13FEF009AD39B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1DE507581CA1196400066311 /* Split */ = {
+			isa = PBXGroup;
+			children = (
+				1DE507641CA11AFB00066311 /* SplitModuleProtocols.swift */,
+				1DE507591CA1196400066311 /* Application Logic */,
+				1DE5075B1CA1196400066311 /* User Interface */,
+			);
+			path = Split;
+			sourceTree = "<group>";
+		};
+		1DE507591CA1196400066311 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1DE5075A1CA1196400066311 /* Interactor */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1DE5075A1CA1196400066311 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1DE5076B1CA11C8B00066311 /* SplitInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1DE5075B1CA1196400066311 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1DE507661CA11B6400066311 /* Module */,
+				1DE5075C1CA1196400066311 /* Presenter */,
+				1DE5075D1CA1196400066311 /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1DE5075C1CA1196400066311 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1DE507691CA11BBC00066311 /* SplitPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1DE5075D1CA1196400066311 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1DE5075E1CA119C600066311 /* SplitViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DE507661CA11B6400066311 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1DE507671CA11B6F00066311 /* SplitModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D7BFD7F1CA024380070F83E /* DeepVIPER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7BFDA81CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPER" */;
+			buildPhases = (
+				1D7BFD7C1CA024380070F83E /* Sources */,
+				1D7BFD7D1CA024380070F83E /* Frameworks */,
+				1D7BFD7E1CA024380070F83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepVIPER;
+			productName = DeepVIPER;
+			productReference = 1D7BFD801CA024380070F83E /* DeepVIPER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D7BFD931CA024380070F83E /* DeepVIPERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7BFDAB1CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPERTests" */;
+			buildPhases = (
+				1D7BFD901CA024380070F83E /* Sources */,
+				1D7BFD911CA024380070F83E /* Frameworks */,
+				1D7BFD921CA024380070F83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D7BFD961CA024380070F83E /* PBXTargetDependency */,
+			);
+			name = DeepVIPERTests;
+			productName = DeepVIPERTests;
+			productReference = 1D7BFD941CA024380070F83E /* DeepVIPERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D7BFD9E1CA024380070F83E /* DeepVIPERUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D7BFDAE1CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPERUITests" */;
+			buildPhases = (
+				1D7BFD9B1CA024380070F83E /* Sources */,
+				1D7BFD9C1CA024380070F83E /* Frameworks */,
+				1D7BFD9D1CA024380070F83E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D7BFDA11CA024380070F83E /* PBXTargetDependency */,
+			);
+			name = DeepVIPERUITests;
+			productName = DeepVIPERUITests;
+			productReference = 1D7BFD9F1CA024380070F83E /* DeepVIPERUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D7BFD781CA024380070F83E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = NoName;
+				TargetAttributes = {
+					1D7BFD7F1CA024380070F83E = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					1D7BFD931CA024380070F83E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 1D7BFD7F1CA024380070F83E;
+					};
+					1D7BFD9E1CA024380070F83E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 1D7BFD7F1CA024380070F83E;
+					};
+				};
+			};
+			buildConfigurationList = 1D7BFD7B1CA024380070F83E /* Build configuration list for PBXProject "DeepVIPER" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D7BFD771CA024380070F83E;
+			productRefGroup = 1D7BFD811CA024380070F83E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D7BFD7F1CA024380070F83E /* DeepVIPER */,
+				1D7BFD931CA024380070F83E /* DeepVIPERTests */,
+				1D7BFD9E1CA024380070F83E /* DeepVIPERUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D7BFD7E1CA024380070F83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7BFD8E1CA024380070F83E /* LaunchScreen.storyboard in Resources */,
+				1D8CDEC91CA169CC009AD39B /* ListTableViewCell.xib in Resources */,
+				1D7BFD8B1CA024380070F83E /* Assets.xcassets in Resources */,
+				1D8CDEBB1CA13C9D009AD39B /* EmptyDetailViewController.xib in Resources */,
+				1D7BFDD41CA02D980070F83E /* ListViewController.xib in Resources */,
+				1D7BFDEC1CA10CC90070F83E /* AddDetailViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD921CA024380070F83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD9D1CA024380070F83E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D7BFD7C1CA024380070F83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7BFDD61CA02DAB0070F83E /* ListInteractor.swift in Sources */,
+				1DE507631CA11A7400066311 /* DeepVIPERWireframe.swift in Sources */,
+				1D7BFDD81CA02DB90070F83E /* ListDataManager.swift in Sources */,
+				1DE5076C1CA11C8B00066311 /* SplitInteractor.swift in Sources */,
+				1D7BFDE61CA10B430070F83E /* ListProtocols.swift in Sources */,
+				1D7BFDE41CA10B1E0070F83E /* AddDetailModule.swift in Sources */,
+				1D7BFDEA1CA10CBF0070F83E /* AddDetailViewController.swift in Sources */,
+				1DE507681CA11B6F00066311 /* SplitModule.swift in Sources */,
+				1D7BFDD01CA02D870070F83E /* ListPresenter.swift in Sources */,
+				1D7BFDDA1CA02DD10070F83E /* ListPONSO.swift in Sources */,
+				1D7BFDF01CA10D0E0070F83E /* AddDetailInteractor.swift in Sources */,
+				1D8CDEC51CA13FFC009AD39B /* EmptyDetailInteractor.swift in Sources */,
+				1D7BFDEE1CA10CF00070F83E /* AddDetailPresenter.swift in Sources */,
+				1DE507651CA11AFB00066311 /* SplitModuleProtocols.swift in Sources */,
+				1D7BFDDC1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift in Sources */,
+				1D7BFDD31CA02D980070F83E /* ListViewController.swift in Sources */,
+				1DE5076A1CA11BBC00066311 /* SplitPresenter.swift in Sources */,
+				1D7BFDE81CA10B7E0070F83E /* AddDetailProtocols.swift in Sources */,
+				1D7BFD841CA024380070F83E /* AppDelegate.swift in Sources */,
+				1D8CDEBE1CA13D69009AD39B /* EmptyDetailModule.swift in Sources */,
+				1D8CDEBA1CA13C9D009AD39B /* EmptyDetailViewController.swift in Sources */,
+				1D8CDEC71CA169C1009AD39B /* ListTableViewCell.swift in Sources */,
+				1D7BFDDE1CA02EDC0070F83E /* DeepVIPERProtocols.swift in Sources */,
+				1D8CDEC21CA13E6B009AD39B /* EmptyDetailPresenter.swift in Sources */,
+				1D8CDEC01CA13D7F009AD39B /* EmptyDetailProtocols.swift in Sources */,
+				1D7BFDE11CA109610070F83E /* ListModule.swift in Sources */,
+				1DE5075F1CA119C600066311 /* SplitViewController.swift in Sources */,
+				1DE507611CA119E200066311 /* DeepVIPERWireframeIPad.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD901CA024380070F83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7BFD991CA024380070F83E /* DeepVIPERTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D7BFD9B1CA024380070F83E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D7BFDA41CA024380070F83E /* DeepVIPERUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D7BFD961CA024380070F83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D7BFD7F1CA024380070F83E /* DeepVIPER */;
+			targetProxy = 1D7BFD951CA024380070F83E /* PBXContainerItemProxy */;
+		};
+		1D7BFDA11CA024380070F83E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D7BFD7F1CA024380070F83E /* DeepVIPER */;
+			targetProxy = 1D7BFDA01CA024380070F83E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D7BFD8C1CA024380070F83E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D7BFD8D1CA024380070F83E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D7BFDA61CA024380070F83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1D7BFDA71CA024380070F83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D7BFDA91CA024380070F83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepVIPER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1D7BFDAA1CA024380070F83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepVIPER/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPER;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1D7BFDAC1CA024380070F83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DeepVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepVIPER.app/DeepVIPER";
+			};
+			name = Debug;
+		};
+		1D7BFDAD1CA024380070F83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DeepVIPERTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPERTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeepVIPER.app/DeepVIPER";
+			};
+			name = Release;
+		};
+		1D7BFDAF1CA024380070F83E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DeepVIPERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DeepVIPER;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1D7BFDB01CA024380070F83E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DeepVIPERUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.noname.DeepVIPERUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DeepVIPER;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D7BFD7B1CA024380070F83E /* Build configuration list for PBXProject "DeepVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D7BFDA61CA024380070F83E /* Debug */,
+				1D7BFDA71CA024380070F83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D7BFDA81CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D7BFDA91CA024380070F83E /* Debug */,
+				1D7BFDAA1CA024380070F83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D7BFDAB1CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D7BFDAC1CA024380070F83E /* Debug */,
+				1D7BFDAD1CA024380070F83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D7BFDAE1CA024380070F83E /* Build configuration list for PBXNativeTarget "DeepVIPERUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D7BFDAF1CA024380070F83E /* Debug */,
+				1D7BFDB01CA024380070F83E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D7BFD781CA024380070F83E /* Project object */;
+}
