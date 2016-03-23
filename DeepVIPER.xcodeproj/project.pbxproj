@@ -21,13 +21,7 @@
 		1D7BFDDC1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDDB1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift */; };
 		1D7BFDDE1CA02EDC0070F83E /* DeepVIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */; };
 		1D7BFDE11CA109610070F83E /* ListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE01CA109610070F83E /* ListModule.swift */; };
-		1D7BFDE41CA10B1E0070F83E /* AddDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */; };
 		1D7BFDE61CA10B430070F83E /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE51CA10B430070F83E /* ListProtocols.swift */; };
-		1D7BFDE81CA10B7E0070F83E /* AddDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */; };
-		1D7BFDEA1CA10CBF0070F83E /* AddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */; };
-		1D7BFDEC1CA10CC90070F83E /* AddDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */; };
-		1D7BFDEE1CA10CF00070F83E /* AddDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */; };
-		1D7BFDF01CA10D0E0070F83E /* AddDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */; };
 		1D8CDEBA1CA13C9D009AD39B /* EmptyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEB81CA13C9D009AD39B /* EmptyDetailViewController.swift */; };
 		1D8CDEBB1CA13C9D009AD39B /* EmptyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CDEB91CA13C9D009AD39B /* EmptyDetailViewController.xib */; };
 		1D8CDEBE1CA13D69009AD39B /* EmptyDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEBD1CA13D69009AD39B /* EmptyDetailModule.swift */; };
@@ -36,6 +30,12 @@
 		1D8CDEC51CA13FFC009AD39B /* EmptyDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */; };
 		1D8CDEC71CA169C1009AD39B /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC61CA169C1009AD39B /* ListTableViewCell.swift */; };
 		1D8CDEC91CA169CC009AD39B /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CDEC81CA169CC009AD39B /* ListTableViewCell.xib */; };
+		1D8CDED91CA2711E009AD39B /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDECD1CA2711E009AD39B /* DetailInteractor.swift */; };
+		1D8CDEDA1CA2711E009AD39B /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDED01CA2711E009AD39B /* DetailProtocols.swift */; };
+		1D8CDEDB1CA2711E009AD39B /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDED31CA2711E009AD39B /* DetailModule.swift */; };
+		1D8CDEDC1CA2711E009AD39B /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDED51CA2711E009AD39B /* DetailPresenter.swift */; };
+		1D8CDEDD1CA2711E009AD39B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8CDED71CA2711E009AD39B /* DetailViewController.swift */; };
+		1D8CDEDE1CA2711E009AD39B /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8CDED81CA2711E009AD39B /* DetailViewController.xib */; };
 		1DE5075F1CA119C600066311 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE5075E1CA119C600066311 /* SplitViewController.swift */; };
 		1DE507611CA119E200066311 /* DeepVIPERWireframeIPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507601CA119E200066311 /* DeepVIPERWireframeIPad.swift */; };
 		1DE507631CA11A7400066311 /* DeepVIPERWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DE507621CA11A7400066311 /* DeepVIPERWireframe.swift */; };
@@ -83,13 +83,7 @@
 		1D7BFDDB1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframeIPhone.swift; sourceTree = "<group>"; };
 		1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERProtocols.swift; sourceTree = "<group>"; };
 		1D7BFDE01CA109610070F83E /* ListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModule.swift; sourceTree = "<group>"; };
-		1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailModule.swift; sourceTree = "<group>"; };
 		1D7BFDE51CA10B430070F83E /* ListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
-		1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailProtocols.swift; sourceTree = "<group>"; };
-		1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailViewController.swift; sourceTree = "<group>"; };
-		1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDetailViewController.xib; sourceTree = "<group>"; };
-		1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailPresenter.swift; sourceTree = "<group>"; };
-		1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDetailInteractor.swift; sourceTree = "<group>"; };
 		1D8CDEB81CA13C9D009AD39B /* EmptyDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailViewController.swift; sourceTree = "<group>"; };
 		1D8CDEB91CA13C9D009AD39B /* EmptyDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyDetailViewController.xib; sourceTree = "<group>"; };
 		1D8CDEBD1CA13D69009AD39B /* EmptyDetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailModule.swift; sourceTree = "<group>"; };
@@ -98,6 +92,12 @@
 		1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDetailInteractor.swift; sourceTree = "<group>"; };
 		1D8CDEC61CA169C1009AD39B /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		1D8CDEC81CA169CC009AD39B /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		1D8CDECD1CA2711E009AD39B /* DetailInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		1D8CDED01CA2711E009AD39B /* DetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		1D8CDED31CA2711E009AD39B /* DetailModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		1D8CDED51CA2711E009AD39B /* DetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		1D8CDED71CA2711E009AD39B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1D8CDED81CA2711E009AD39B /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		1DE5075E1CA119C600066311 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		1DE507601CA119E200066311 /* DeepVIPERWireframeIPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframeIPad.swift; sourceTree = "<group>"; };
 		1DE507621CA11A7400066311 /* DeepVIPERWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepVIPERWireframe.swift; sourceTree = "<group>"; };
@@ -189,82 +189,13 @@
 			isa = PBXGroup;
 			children = (
 				1D7BFDDD1CA02EDC0070F83E /* DeepVIPERProtocols.swift */,
+				1D8CDECA1CA2711E009AD39B /* Detail */,
 				1D8CDEB31CA13C6D009AD39B /* EmptyDetail */,
 				1DE507581CA1196400066311 /* Split */,
-				1D7BFDB21CA02D5E0070F83E /* AddDetail */,
 				1D7BFDBB1CA02D5E0070F83E /* List */,
 				1D7BFDC41CA02D5E0070F83E /* OpenDetail */,
 			);
 			path = Modules;
-			sourceTree = "<group>";
-		};
-		1D7BFDB21CA02D5E0070F83E /* AddDetail */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDE71CA10B7E0070F83E /* AddDetailProtocols.swift */,
-				1D7BFDB31CA02D5E0070F83E /* Application Logic */,
-				1D7BFDB71CA02D5E0070F83E /* User Interface */,
-			);
-			path = AddDetail;
-			sourceTree = "<group>";
-		};
-		1D7BFDB31CA02D5E0070F83E /* Application Logic */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDB41CA02D5E0070F83E /* Interactor */,
-				1D7BFDB51CA02D5E0070F83E /* Manager */,
-				1D7BFDB61CA02D5E0070F83E /* Model */,
-			);
-			path = "Application Logic";
-			sourceTree = "<group>";
-		};
-		1D7BFDB41CA02D5E0070F83E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDEF1CA10D0E0070F83E /* AddDetailInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		1D7BFDB51CA02D5E0070F83E /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		1D7BFDB61CA02D5E0070F83E /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1D7BFDB71CA02D5E0070F83E /* User Interface */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDE21CA10B0B0070F83E /* Module */,
-				1D7BFDB81CA02D5E0070F83E /* Presenter */,
-				1D7BFDBA1CA02D5E0070F83E /* View */,
-			);
-			path = "User Interface";
-			sourceTree = "<group>";
-		};
-		1D7BFDB81CA02D5E0070F83E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDED1CA10CF00070F83E /* AddDetailPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
-		1D7BFDBA1CA02D5E0070F83E /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDE91CA10CBF0070F83E /* AddDetailViewController.swift */,
-				1D7BFDEB1CA10CC90070F83E /* AddDetailViewController.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		1D7BFDBB1CA02D5E0070F83E /* List */ = {
@@ -419,14 +350,6 @@
 			path = Module;
 			sourceTree = "<group>";
 		};
-		1D7BFDE21CA10B0B0070F83E /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				1D7BFDE31CA10B1E0070F83E /* AddDetailModule.swift */,
-			);
-			path = Module;
-			sourceTree = "<group>";
-		};
 		1D8CDEB31CA13C6D009AD39B /* EmptyDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +409,83 @@
 				1D8CDEC41CA13FFC009AD39B /* EmptyDetailInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1D8CDECA1CA2711E009AD39B /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDECB1CA2711E009AD39B /* Application Logic */,
+				1D8CDED01CA2711E009AD39B /* DetailProtocols.swift */,
+				1D8CDED11CA2711E009AD39B /* User Interface */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		1D8CDECB1CA2711E009AD39B /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDECC1CA2711E009AD39B /* Interactor */,
+				1D8CDECE1CA2711E009AD39B /* Manager */,
+				1D8CDECF1CA2711E009AD39B /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		1D8CDECC1CA2711E009AD39B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDECD1CA2711E009AD39B /* DetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1D8CDECE1CA2711E009AD39B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1D8CDECF1CA2711E009AD39B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D8CDED11CA2711E009AD39B /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDED21CA2711E009AD39B /* Module */,
+				1D8CDED41CA2711E009AD39B /* Presenter */,
+				1D8CDED61CA2711E009AD39B /* View */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		1D8CDED21CA2711E009AD39B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDED31CA2711E009AD39B /* DetailModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		1D8CDED41CA2711E009AD39B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDED51CA2711E009AD39B /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1D8CDED61CA2711E009AD39B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1D8CDED71CA2711E009AD39B /* DetailViewController.swift */,
+				1D8CDED81CA2711E009AD39B /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		1DE507581CA1196400066311 /* Split */ = {
@@ -653,11 +653,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D7BFD8E1CA024380070F83E /* LaunchScreen.storyboard in Resources */,
+				1D8CDEDE1CA2711E009AD39B /* DetailViewController.xib in Resources */,
 				1D8CDEC91CA169CC009AD39B /* ListTableViewCell.xib in Resources */,
 				1D7BFD8B1CA024380070F83E /* Assets.xcassets in Resources */,
 				1D8CDEBB1CA13C9D009AD39B /* EmptyDetailViewController.xib in Resources */,
 				1D7BFDD41CA02D980070F83E /* ListViewController.xib in Resources */,
-				1D7BFDEC1CA10CC90070F83E /* AddDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,24 +684,23 @@
 			files = (
 				1D7BFDD61CA02DAB0070F83E /* ListInteractor.swift in Sources */,
 				1DE507631CA11A7400066311 /* DeepVIPERWireframe.swift in Sources */,
+				1D8CDEDC1CA2711E009AD39B /* DetailPresenter.swift in Sources */,
+				1D8CDEDB1CA2711E009AD39B /* DetailModule.swift in Sources */,
 				1D7BFDD81CA02DB90070F83E /* ListDataManager.swift in Sources */,
 				1DE5076C1CA11C8B00066311 /* SplitInteractor.swift in Sources */,
 				1D7BFDE61CA10B430070F83E /* ListProtocols.swift in Sources */,
-				1D7BFDE41CA10B1E0070F83E /* AddDetailModule.swift in Sources */,
-				1D7BFDEA1CA10CBF0070F83E /* AddDetailViewController.swift in Sources */,
 				1DE507681CA11B6F00066311 /* SplitModule.swift in Sources */,
 				1D7BFDD01CA02D870070F83E /* ListPresenter.swift in Sources */,
 				1D7BFDDA1CA02DD10070F83E /* ListPONSO.swift in Sources */,
-				1D7BFDF01CA10D0E0070F83E /* AddDetailInteractor.swift in Sources */,
 				1D8CDEC51CA13FFC009AD39B /* EmptyDetailInteractor.swift in Sources */,
-				1D7BFDEE1CA10CF00070F83E /* AddDetailPresenter.swift in Sources */,
 				1DE507651CA11AFB00066311 /* SplitModuleProtocols.swift in Sources */,
 				1D7BFDDC1CA02DEF0070F83E /* DeepVIPERWireframeIPhone.swift in Sources */,
 				1D7BFDD31CA02D980070F83E /* ListViewController.swift in Sources */,
 				1DE5076A1CA11BBC00066311 /* SplitPresenter.swift in Sources */,
-				1D7BFDE81CA10B7E0070F83E /* AddDetailProtocols.swift in Sources */,
+				1D8CDEDA1CA2711E009AD39B /* DetailProtocols.swift in Sources */,
 				1D7BFD841CA024380070F83E /* AppDelegate.swift in Sources */,
 				1D8CDEBE1CA13D69009AD39B /* EmptyDetailModule.swift in Sources */,
+				1D8CDED91CA2711E009AD39B /* DetailInteractor.swift in Sources */,
 				1D8CDEBA1CA13C9D009AD39B /* EmptyDetailViewController.swift in Sources */,
 				1D8CDEC71CA169C1009AD39B /* ListTableViewCell.swift in Sources */,
 				1D7BFDDE1CA02EDC0070F83E /* DeepVIPERProtocols.swift in Sources */,
@@ -710,6 +709,7 @@
 				1D7BFDE11CA109610070F83E /* ListModule.swift in Sources */,
 				1DE5075F1CA119C600066311 /* SplitViewController.swift in Sources */,
 				1DE507611CA119E200066311 /* DeepVIPERWireframeIPad.swift in Sources */,
+				1D8CDEDD1CA2711E009AD39B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

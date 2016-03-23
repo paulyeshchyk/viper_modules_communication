@@ -99,4 +99,10 @@ class ListViewController: UIViewController, ListViewProtocol, UITableViewDataSou
 //        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         self.output?.openDetailAtIndex(indexPath.row)
     }
+    
+    func reloadItemAtIndex(index:Int) {
+        
+        let indexPath = NSIndexPath(forRow: index, inSection: 0)
+        self.tableView?.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+    }
 }

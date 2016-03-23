@@ -10,9 +10,9 @@ import UIKit
 
 class DeepVIPERWireframeIPad: DeepVIPERWireframe {
 
-    let splitModule:SplitModuleProtocol
+    var splitModule:SplitModuleProtocol
     let listModule:ListModuleProtocol
-    let addDetailModule:AddDetailModuleProtocol
+    var detailModule:DetailModuleProtocol
     let emptyDetailModule:EmptyDetailModuleProtocol
     
     var root:UIViewController?
@@ -21,32 +21,36 @@ class DeepVIPERWireframeIPad: DeepVIPERWireframe {
         
         splitModule = SplitModule(window: window)
         listModule = ListModule(window: window)
-        addDetailModule = AddDetailModule(window: window)
+        detailModule = DetailModule(window: window)
         emptyDetailModule = EmptyDetailModule(window: window)
 
         super.init(window:window)
         
-        addDetailModule.useCancelButton = true
+        detailModule.useCancelButton = true
         
         splitModule.masterPresenter = listModule.presenter
-        splitModule.detailPresenter = addDetailModule.presenter
+        splitModule.detailPresenter = detailModule.presenter
         splitModule.emptyDetailPresenter = emptyDetailModule.presenter
         
         listModule.openOutput = {(item) in
 
+            
+            self.detailModule.ponso = item
             self.splitModule.presenter.selectedItem = item
         }
         
         listModule.addOutput = {() in
 
-            self.addDetailModule.useCancelButton = true
+            self.detailModule.useCancelButton = true
         }
 
-        addDetailModule.saveOutput = {() in
+        detailModule.saveOutput = {(ponso) in
+            
+            self.listModule.refreshPonso(ponso)
             
         }
 
-        addDetailModule.cancelOutput = {() in
+        detailModule.cancelOutput = {() in
             
         }
 

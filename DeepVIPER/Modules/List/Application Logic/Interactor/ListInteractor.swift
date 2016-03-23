@@ -8,16 +8,21 @@
 
 import UIKit
 
-class ListInteractor: NSObject, ListInteractorProtocol {
+class ListInteractor: NSObject, ListInteractorProtocol, ListDataSourceListenerProtocol {
     
     var output:ListPresenterProtocol?
     var datasource:ListDatasourceProtocol
     var selectedItem:String?
 
+    deinit {
+        
+        self.datasource.listener = nil
+    }
     required init(datasource: ListDatasourceProtocol) {
         
         self.datasource = datasource
         super.init()
+        self.datasource.listener = self
     }
     
     
@@ -25,12 +30,8 @@ class ListInteractor: NSObject, ListInteractorProtocol {
         
         //TODO: make service call
         
-        guard let output = self.output else {
-            
-            return
-        }
         
-        output.redrawData()
+        output?.redrawData()
         
     }
     
@@ -42,6 +43,11 @@ class ListInteractor: NSObject, ListInteractorProtocol {
     func listItemAtIndex(index:Int)->ListPONSO {
         
         return self.datasource.itemAtIndex(index)
+    }
+    
+    func hasUpdatedData() {
+        
+        self.refetchData()
     }
 
     

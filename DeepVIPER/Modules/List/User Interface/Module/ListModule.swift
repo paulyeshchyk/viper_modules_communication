@@ -12,6 +12,7 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
 
     var presenter:ListPresenterProtocol
     var listView:ListViewProtocol
+    let datamanager: ListDatasourceProtocol
     var listInteractor:ListInteractorProtocol
     var addOutput:ListModuleAddDetailOutput?
     var openOutput: ListModuleOpenDetailOutput?
@@ -22,7 +23,7 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
         
         routerWindow = window
 
-        let datamanager = ListDataManager()
+        datamanager = ListDataManager()
         listInteractor = ListInteractor(datasource:datamanager)
 
         listView = ListViewController(nibName:"ListViewController", bundle: NSBundle.mainBundle())
@@ -52,6 +53,17 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
         routerWindow.rootViewController = result
         routerWindow.makeKeyAndVisible()
         return result
+    }
+    
+    func updatePonso(ponso: ListPONSO) {
+     
+        datamanager.updatePonso(ponso)
+    }
+    
+    func refreshPonso(ponso: ListPONSO) {
+        
+        let index = datamanager.indexOfItem(ponso)
+        self.presenter.redrawItemAtIndex(index)
     }
     
     func openItem(item: ListPONSO) {

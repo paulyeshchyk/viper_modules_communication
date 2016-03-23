@@ -1,5 +1,5 @@
 //
-//  AddDetailPresenter.swift
+//  DetailPresenter.swift
 //  DeepVIPER
 //
 //  Created by Pavel Yeshchyk on 3/22/16.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AddDetailPresenter: NSObject, AddDetailPresenterProtocol {
+class DetailPresenter: NSObject, DetailPresenterProtocol {
 
-    var rootView:AddDetailViewProtocol
-    var rootInteractor:AddDetailInteractorProtocol
-    var output:AddDetailPresenterOutput?
+    var rootView:DetailViewProtocol
+    var rootInteractor:DetailInteractorProtocol
+    var output:DetailPresenterOutput?
     
     var viewController: UIViewController {
         
@@ -22,7 +22,17 @@ class AddDetailPresenter: NSObject, AddDetailPresenterProtocol {
         }
     }
     
-    required init(view: AddDetailViewProtocol, interactor: AddDetailInteractorProtocol) {
+    var ponso: ListPONSO? {
+        
+        didSet {
+            
+            rootView.nameValue = ponso?.text
+            rootView.identValue = ponso?.ident
+            rootView.redrawData()
+        }
+    }
+    
+    required init(view: DetailViewProtocol, interactor: DetailInteractorProtocol) {
 
         rootView = view
         rootInteractor = interactor
@@ -42,18 +52,13 @@ class AddDetailPresenter: NSObject, AddDetailPresenterProtocol {
 
         nc.popViewControllerAnimated(true)
     }
-    
-    
+
     func redrawData() {
-        
-        
-        
+
     }
 
-    
     func cancelAddItem() {
-    
-        
+
         guard let output = self.output else {
             
             return
@@ -69,7 +74,15 @@ class AddDetailPresenter: NSObject, AddDetailPresenterProtocol {
             return
         }
         
-        output.saveDetail()
+        guard let ponso = self.ponso else {
+            
+            return
+        }
+        
+        ponso.ident = rootView.identValue!
+        ponso.text = rootView.nameValue!
+        
+        output.saveDetail(ponso)
         
     }
     

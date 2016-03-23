@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddDetailViewController" customModule="DeepVIPER" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="DeepVIPER" customModuleProvider="target">
             <connections>
                 <outlet property="identTextField" destination="EC8-kF-ce7" id="hgL-Lf-IeV"/>
                 <outlet property="nameTextField" destination="wOR-d3-DjF" id="si7-OL-fi3"/>
@@ -33,6 +33,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="SJs-5l-q2t"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ident:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgE-mu-wfR">
                     <rect key="frame" x="8" y="160" width="584" height="21"/>
@@ -50,6 +53,9 @@
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Bbw-3G-G53"/>
+                    </connections>
                 </textField>
             </subviews>
             <color key="backgroundColor" red="0.1019607843" green="0.54117647059999996" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>

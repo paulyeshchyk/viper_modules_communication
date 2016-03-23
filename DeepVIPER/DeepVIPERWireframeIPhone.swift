@@ -11,13 +11,13 @@ import UIKit
 class DeepVIPERWireframeIPhone: DeepVIPERWireframe {
 
     let listModule:ListModuleProtocol
-    let addDetailModule:AddDetailModuleProtocol
+    var detailModule:DetailModuleProtocol
     var root:UIViewController?
     
     required init(window:UIWindow) {
 
         listModule = ListModule(window: window)
-        addDetailModule = AddDetailModule(window: window)
+        detailModule = DetailModule(window: window)
 
         super.init(window:window)
 
@@ -30,7 +30,8 @@ class DeepVIPERWireframeIPhone: DeepVIPERWireframe {
                 return
             }
             
-            self.addDetailModule.pushFrom(nc)
+            self.detailModule.ponso = item
+            self.detailModule.pushFrom(nc)
         }
         
         listModule.addOutput = {() in
@@ -40,25 +41,27 @@ class DeepVIPERWireframeIPhone: DeepVIPERWireframe {
                 return
             }
             
-            self.addDetailModule.pushFrom(nc)
+            self.detailModule.pushFrom(nc)
         }
 
-        addDetailModule.saveOutput = {() in
+        detailModule.saveOutput = {(ponso) in
+        
+            self.listModule.updatePonso(ponso)
+            
+            guard let nc = self.root as? UINavigationController else {
+                
+                return
+            }
+            self.detailModule.popFrom(nc)
+        }
+
+        detailModule.cancelOutput = {() in
         
             guard let nc = self.root as? UINavigationController else {
                 
                 return
             }
-            self.addDetailModule.popFrom(nc)
-        }
-
-        addDetailModule.cancelOutput = {() in
-        
-            guard let nc = self.root as? UINavigationController else {
-                
-                return
-            }
-            self.addDetailModule.popFrom(nc)
+            self.detailModule.popFrom(nc)
 
         }
         

@@ -17,6 +17,8 @@ protocol ListModuleProtocol:ModuleProtocol {
     var listView:ListViewProtocol {get set}
     var addOutput:ListModuleAddDetailOutput? { get set}
     var openOutput:ListModuleOpenDetailOutput? { get set}
+    func updatePonso(ponso:ListPONSO)
+    func refreshPonso(ponso:ListPONSO)
 }
 
 protocol ListViewProtocol:ViewProtocol {
@@ -24,12 +26,23 @@ protocol ListViewProtocol:ViewProtocol {
     var input:ListInteractorProtocol? {get set}
     var output:ListPresenterProtocol? {get set}
     func reloadTableview()
+    func reloadItemAtIndex(index:Int)
+}
+
+protocol ListDataSourceListenerProtocol {
+    
+    func hasUpdatedData()
 }
 
 protocol ListDatasourceProtocol {
-    
+
+    var listener:ListDataSourceListenerProtocol? {get set}
     func numberOfItems()->Int
     func itemAtIndex(index:Int)->ListPONSO
+    func indexOfItem(item:ListPONSO)->Int
+    func updatePonso(ponso:ListPONSO)
+    func addPonso(ponso:ListPONSO)
+    
 }
 
 protocol ListInteractorProtocol {
@@ -61,6 +74,7 @@ protocol ListPresenterProtocol:PresenterProtocol {
 
     
     func addItem()
+    func redrawItemAtIndex(index:Int)
 }
 
 protocol ListPresenterOutput {

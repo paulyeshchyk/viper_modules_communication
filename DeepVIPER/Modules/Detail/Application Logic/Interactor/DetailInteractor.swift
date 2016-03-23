@@ -1,5 +1,5 @@
 //
-//  AddDetailInteractor.swift
+//  DetailInteractor.swift
 //  DeepVIPER
 //
 //  Created by Pavel Yeshchyk on 3/22/16.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AddDetailInteractor: NSObject, AddDetailInteractorProtocol {
+class DetailInteractor: NSObject, DetailInteractorProtocol {
 
-    var output:AddDetailPresenterProtocol?
+    var output:DetailPresenterProtocol?
 
     
     func refetchData() {

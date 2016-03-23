@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "08377ADDB06BB0B1916B0448CCD3EC195EE43D07",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "08377ADDB06BB0B1916B0448CCD3EC195EE43D07" : 0,
+    "C9BD1A03594EE65A959A9C6FE584D1B0FE3F7422" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E15FD520-110A-49DE-AC04-D86A0645B338",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "08377ADDB06BB0B1916B0448CCD3EC195EE43D07" : "viper_modules_communication\/",
+    "C9BD1A03594EE65A959A9C6FE584D1B0FE3F7422" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DeepVIPER",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DeepVIPER.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/paulyeshchyk\/viper_modules_communication.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "08377ADDB06BB0B1916B0448CCD3EC195EE43D07"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/paulyeshchyk\/viper.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C9BD1A03594EE65A959A9C6FE584D1B0FE3F7422"
+    }
+  ]
+}

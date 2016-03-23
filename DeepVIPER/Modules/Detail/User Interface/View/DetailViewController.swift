@@ -1,5 +1,5 @@
 //
-//  AddDetailViewController.swift
+//  DetailViewController.swift
 //  DeepVIPER
 //
 //  Created by Pavel Yeshchyk on 3/22/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddDetailViewController: UIViewController, AddDetailViewProtocol {
+class DetailViewController: UIViewController, DetailViewProtocol, UITextFieldDelegate {
 
     var hasCancelButton: Bool = false {
         
@@ -18,7 +18,7 @@ class AddDetailViewController: UIViewController, AddDetailViewProtocol {
         }
     }
     
-    var output:AddDetailPresenterProtocol?
+    var output:DetailPresenterProtocol?
     var viewController:UIViewController {
         
         get {
@@ -29,42 +29,45 @@ class AddDetailViewController: UIViewController, AddDetailViewProtocol {
 
     @IBOutlet var nameTextField:UITextField?
     @IBOutlet var identTextField:UITextField?
-    
-    
-    var nameValue:String? {
-        
-        didSet {
-            
-            if (self.isViewLoaded()) {
-                
-                self.nameTextField?.text = self.nameValue
-            }
-        }
-    }
 
-    var identValue:String? {
+    var nameValue:String?
+    var identValue:String?
+
+    func redrawData() {
         
-        didSet {
+        if (self.isViewLoaded()) {
             
-            if (self.isViewLoaded()) {
-                
-                self.identTextField?.text = self.identValue
-            }
+            self.nameTextField?.text = self.nameValue
+            self.identTextField?.text = self.identValue
         }
     }
-    
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
 
-        self.identTextField?.text = self.identValue
-        self.nameTextField?.text = self.nameValue
+        self.identTextField?.addTarget(self, action: #selector(identChanged(_:)), forControlEvents: .EditingDidEndOnExit)
+        self.nameTextField?.addTarget(self, action: #selector(nameChanged(_:)), forControlEvents: .EditingDidEndOnExit)
         
         self.rebuildNavigationItem()
         self.invalidate()
+
+        self.redrawData()
+        
     }
 
+    func identChanged(sender:AnyObject?) {
+    
+        self.identValue = self.identTextField?.text
+        self.identTextField?.resignFirstResponder()
+    }
+    
+    func nameChanged(sender:AnyObject?) {
+        
+        self.nameValue = self.nameTextField?.text
+        self.nameTextField?.resignFirstResponder()
+    }
+    
     func rebuildNavigationItem () {
     
         if !self.isViewLoaded() {
@@ -74,7 +77,7 @@ class AddDetailViewController: UIViewController, AddDetailViewProtocol {
         
         if self.hasCancelButton {
             
-            let cancelItem = UIBarButtonItem(barButtonSystemItem:.Cancel, target: self, action: #selector(AddDetailViewController.cancelAddItem(_:)))
+            let cancelItem = UIBarButtonItem(barButtonSystemItem:.Cancel, target: self, action: #selector(DetailViewController.cancelAddItem(_:)))
             self.navigationItem.leftBarButtonItems = [cancelItem]
             
         } else {
@@ -83,7 +86,7 @@ class AddDetailViewController: UIViewController, AddDetailViewProtocol {
         }
     
     
-        let saveItem = UIBarButtonItem(barButtonSystemItem:.Save, target: self, action: #selector(AddDetailViewController.saveItem(_:)))
+        let saveItem = UIBarButtonItem(barButtonSystemItem:.Save, target: self, action: #selector(DetailViewController.saveItem(_:)))
         self.navigationItem.rightBarButtonItems = [saveItem]
     }
     
@@ -114,4 +117,10 @@ class AddDetailViewController: UIViewController, AddDetailViewProtocol {
         output.fetchData()
     }
     
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+//        textField.resignFirstResponder()
+        return true
+    }
 }

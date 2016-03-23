@@ -56,4 +56,9 @@ class ListPresenter: ListPresenterProtocol {
         
         self.output?.openItem(item)
     }
+    
+    func redrawItemAtIndex(index:Int) {
+        
+        listView.reloadItemAtIndex(index)
+    }
 }

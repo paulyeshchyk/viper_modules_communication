@@ -1,5 +1,5 @@
 //
-//  AddDetailProtocols.swift
+//  DetailProtocols.swift
 //  DeepVIPER
 //
 //  Created by Pavel Yeshchyk on 3/22/16.
@@ -8,25 +8,26 @@
 
 import UIKit
 
-typealias AddDetailModuleOutput = ()->()
+typealias DetailModuleOutput = (ponso:ListPONSO)->()
 typealias CancelAddDetailModuleOutput = ()->()
 
-protocol AddDetailModuleProtocol:ModuleProtocol {
+protocol DetailModuleProtocol:ModuleProtocol {
     
     init(window:UIWindow)
 
+    var ponso:ListPONSO? { get set }
     @available(*, deprecated=1.0, message="Because !") var useCancelButton:Bool { get set }
-    var saveOutput:AddDetailModuleOutput? { get set}
+    var saveOutput:DetailModuleOutput? { get set}
     var cancelOutput:CancelAddDetailModuleOutput? {get set}
-    var presenter:AddDetailPresenterProtocol { get set}
+    var presenter:DetailPresenterProtocol { get set}
 }
 
-protocol AddDetailPresenterProtocol:PresenterProtocol {
+protocol DetailPresenterProtocol:PresenterProtocol {
     
-    var output:AddDetailPresenterOutput? {get set}
-    init(view:AddDetailViewProtocol, interactor:AddDetailInteractorProtocol)
+    var output:DetailPresenterOutput? {get set}
+    init(view:DetailViewProtocol, interactor:DetailInteractorProtocol)
 
-    
+    var ponso: ListPONSO? { get set }
     func redrawData()
     
     func fetchData()
@@ -39,25 +40,27 @@ protocol AddDetailPresenterProtocol:PresenterProtocol {
     func saveItem()
 }
 
-protocol AddDetailViewProtocol:ViewProtocol {
+protocol DetailViewProtocol:ViewProtocol {
     
     var nameValue:String? { get set }
     var identValue:String? { get set }
 
     var hasCancelButton:Bool { get set }
-    var output:AddDetailPresenterProtocol? { get set }
+    var output:DetailPresenterProtocol? { get set }
+    
+    func redrawData()
 }
 
-protocol AddDetailInteractorProtocol:InteractorProtocol {
+protocol DetailInteractorProtocol:InteractorProtocol {
     
-    var output:AddDetailPresenterProtocol? { get set}
+    var output:DetailPresenterProtocol? { get set}
     func refetchData()
     
 }
 
-protocol AddDetailPresenterOutput {
+protocol DetailPresenterOutput {
     
     func hasCancelButton()->Bool
     func cancelAddDetail()
-    func saveDetail()
+    func saveDetail(ponso:ListPONSO)
 }

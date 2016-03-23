@@ -1,5 +1,5 @@
 //
-//  AddDetailModule.swift
+//  DetailModule.swift
 //  DeepVIPER
 //
 //  Created by Pavel Yeshchyk on 3/22/16.
@@ -8,28 +8,36 @@
 
 import UIKit
 
-class AddDetailModule:NSObject, AddDetailModuleProtocol,AddDetailPresenterOutput {
+class DetailModule:NSObject, DetailModuleProtocol,DetailPresenterOutput {
 
-    var presenter:AddDetailPresenterProtocol
-    var addDetailView:AddDetailViewProtocol
-    var addDetailInteractor:AddDetailInteractorProtocol
-    var saveOutput:AddDetailModuleOutput?
+    var presenter:DetailPresenterProtocol
+    var detailView:DetailViewProtocol
+    var detailInteractor:DetailInteractorProtocol
+    var saveOutput:DetailModuleOutput?
     var cancelOutput:CancelAddDetailModuleOutput?
     
     var useCancelButton:Bool
     
     var routerWindow:UIWindow
     
+    var ponso: ListPONSO? {
+        
+        didSet {
+            
+            self.presenter.ponso = self.ponso
+        }
+    }
+
     required init(window: UIWindow) {
         
         routerWindow = window
         useCancelButton = false
         
-        addDetailInteractor = AddDetailInteractor()
+        detailInteractor = DetailInteractor()
         
-        addDetailView = AddDetailViewController(nibName:"AddDetailViewController", bundle: NSBundle.mainBundle())
-        presenter = AddDetailPresenter(view: addDetailView, interactor:addDetailInteractor)
-        addDetailView.output = presenter
+        detailView = DetailViewController(nibName:"DetailViewController", bundle: NSBundle.mainBundle())
+        presenter = DetailPresenter(view: detailView, interactor:detailInteractor)
+        detailView.output = presenter
         
         super.init()
         presenter.output = self
@@ -37,6 +45,8 @@ class AddDetailModule:NSObject, AddDetailModuleProtocol,AddDetailPresenterOutput
     
     func makeRoot()->UIViewController{
         
+        presenter.ponso = self.ponso
+
         let result = presenter.viewController
         routerWindow.rootViewController = result
         routerWindow.makeKeyAndVisible()
@@ -45,6 +55,7 @@ class AddDetailModule:NSObject, AddDetailModuleProtocol,AddDetailPresenterOutput
     
     func pushFrom(navigationController:UINavigationController) {
         
+        presenter.ponso = self.ponso
         presenter.pushUsingNavigationController(navigationController)
     }
     
@@ -69,13 +80,13 @@ class AddDetailModule:NSObject, AddDetailModuleProtocol,AddDetailPresenterOutput
         cancelOutput()
     }
     
-    func saveDetail() {
+    func saveDetail(ponso:ListPONSO) {
         
         guard let saveOutput = self.saveOutput else {
             
             return
         }
         
-        saveOutput()
+        saveOutput(ponso:ponso)
     }
 }
