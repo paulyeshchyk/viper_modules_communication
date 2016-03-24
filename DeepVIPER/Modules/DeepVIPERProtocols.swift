@@ -15,6 +15,8 @@ protocol ModuleProtocol {
     func makeRoot()->UIViewController
     func pushFrom(navigationController:UINavigationController)
     func popFrom(navigationController:UINavigationController)
+    
+    var view:UIViewController {get}
 }
 
 protocol ViewProtocol {

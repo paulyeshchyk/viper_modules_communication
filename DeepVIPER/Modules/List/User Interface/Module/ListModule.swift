@@ -18,6 +18,13 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
     var openOutput: ListModuleOpenDetailOutput?
     
     var routerWindow:UIWindow
+    var view: UIViewController {
+        
+        get {
+            
+            return self.listView.viewController
+        }
+    }
     
     required init(window: UIWindow) {
         
@@ -39,7 +46,7 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
     
     func pushFrom(navigationController:UINavigationController) {
         
-        navigationController.pushViewController(listView.viewController, animated: true)
+        navigationController.pushViewController(self.view, animated: true)
     }
 
     func popFrom(navigationController: UINavigationController) {
@@ -49,10 +56,9 @@ class ListModule: ListModuleProtocol, ListPresenterOutput {
     
     func makeRoot() -> UIViewController{
         
-        let result = presenter.viewController
-        routerWindow.rootViewController = result
+        routerWindow.rootViewController = self.view
         routerWindow.makeKeyAndVisible()
-        return result
+        return self.view
     }
     
     func updatePonso(ponso: ListPONSO) {

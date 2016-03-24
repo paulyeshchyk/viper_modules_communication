@@ -20,11 +20,19 @@ class DetailModule:NSObject, DetailModuleProtocol,DetailPresenterOutput {
     
     var routerWindow:UIWindow
     
-    var ponso: ListPONSO? {
+    var detail: ListPONSO? {
         
         didSet {
             
-            self.presenter.ponso = self.ponso
+            self.presenter.ponso = self.detail
+        }
+    }
+
+    var view: UIViewController {
+        
+        get {
+            
+            return self.detailView.viewController
         }
     }
 
@@ -45,17 +53,16 @@ class DetailModule:NSObject, DetailModuleProtocol,DetailPresenterOutput {
     
     func makeRoot()->UIViewController{
         
-        presenter.ponso = self.ponso
+        presenter.ponso = self.detail
 
-        let result = presenter.viewController
-        routerWindow.rootViewController = result
+        routerWindow.rootViewController = self.view
         routerWindow.makeKeyAndVisible()
-        return result
+        return self.view
     }
     
     func pushFrom(navigationController:UINavigationController) {
         
-        presenter.ponso = self.ponso
+        presenter.ponso = self.detail
         presenter.pushUsingNavigationController(navigationController)
     }
     

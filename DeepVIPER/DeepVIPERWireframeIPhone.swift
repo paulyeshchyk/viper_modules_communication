@@ -30,7 +30,7 @@ class DeepVIPERWireframeIPhone: DeepVIPERWireframe {
                 return
             }
             
-            self.detailModule.ponso = item
+            self.detailModule.detail = item
             self.detailModule.pushFrom(nc)
         }
         

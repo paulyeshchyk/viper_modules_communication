@@ -15,6 +15,15 @@ class SplitModule: SplitModuleProtocol {
     var interactor:SplitInteractorProtocol
     var rootWindow:UIWindow
 
+    
+    var view: UIViewController {
+        
+        get {
+            
+            return self.splitView.viewController
+        }
+    }
+
     var emptyDetailPresenter: PresenterProtocol? {
         
         didSet {
@@ -53,7 +62,7 @@ class SplitModule: SplitModuleProtocol {
     
     func pushFrom(navigationController:UINavigationController) {
         
-        navigationController.pushViewController(presenter.viewController, animated: true)
+        navigationController.pushViewController(self.view, animated: true)
     }
     
     func popFrom(navigationController: UINavigationController) {
@@ -63,9 +72,8 @@ class SplitModule: SplitModuleProtocol {
     
     func makeRoot() -> UIViewController{
         
-        let result = presenter.viewController
-        rootWindow.rootViewController = result
+        rootWindow.rootViewController = self.view
         rootWindow.makeKeyAndVisible()
-        return result
+        return self.view
     }
 }

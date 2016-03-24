@@ -12,28 +12,36 @@ class EmptyDetailModule: NSObject, EmptyDetailModuleProtocol {
 
     var rootWindow:UIWindow
     var presenter: EmptyDetailPresenterProtocol
+    var emptyDetailView:EmptyDetailViewProtocol
+    
+    var view: UIViewController {
+        
+        get {
+            
+            return self.emptyDetailView.viewController
+        }
+    }
     
     required init(window:UIWindow) {
         
         rootWindow = window
         
-        let view = EmptyDetailViewController(nibName: "EmptyDetailViewController", bundle: NSBundle.mainBundle())
+        emptyDetailView = EmptyDetailViewController(nibName: "EmptyDetailViewController", bundle: NSBundle.mainBundle())
         let interactor = EmptyDetailInteractor()
-        presenter = EmptyDetailPresenter(view: view, interactor: interactor)
+        presenter = EmptyDetailPresenter(view: emptyDetailView, interactor: interactor)
         super.init()
         
     }
     func makeRoot()->UIViewController {
         
-        let result = presenter.viewController
-        rootWindow.rootViewController = result
+        rootWindow.rootViewController = self.view
         rootWindow.makeKeyAndVisible()
-        return result
+        return self.view
     }
     
     func pushFrom(navigationController:UINavigationController) {
         
-        navigationController.pushViewController(presenter.viewController, animated: true)
+        navigationController.pushViewController(self.view, animated: true)
     }
     
     func popFrom(navigationController:UINavigationController) {

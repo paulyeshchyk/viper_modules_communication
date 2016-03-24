@@ -35,7 +35,7 @@ class DeepVIPERWireframeIPad: DeepVIPERWireframe {
         listModule.openOutput = {(item) in
 
             
-            self.detailModule.ponso = item
+            self.detailModule.detail = item
             self.splitModule.presenter.selectedItem = item
         }
         
@@ -47,7 +47,6 @@ class DeepVIPERWireframeIPad: DeepVIPERWireframe {
         detailModule.saveOutput = {(ponso) in
             
             self.listModule.refreshPonso(ponso)
-            
         }
 
         detailModule.cancelOutput = {() in
