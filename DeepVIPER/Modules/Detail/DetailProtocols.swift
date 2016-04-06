@@ -17,7 +17,6 @@ protocol DetailModuleProtocol:ModuleProtocol {
 
     //TODO: rename ponso
     var detail:ListPONSO? { get set }
-    @available(*, deprecated=1.0, message="Because !") var useCancelButton:Bool { get set }
     var saveOutput:DetailModuleOutput? { get set}
     var cancelOutput:CancelAddDetailModuleOutput? {get set}
     var presenter:DetailPresenterProtocol { get set}

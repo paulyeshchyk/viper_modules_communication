@@ -12,19 +12,9 @@ class SplitPresenter: NSObject, SplitPresenterProtocol {
 
     var splitView:SplitViewProtocol
     var interactor:SplitInteractorProtocol?
-    
-    
-    var selectedItem: ListPONSO? {
-        
-        didSet {
-            
-            self.interactor?.selectedItem = self.selectedItem
-            self.rebuildPresenters()
-        }
-    }
 
     var masterPresenter:PresenterProtocol? {
-
+        
         didSet {
             
             self.rebuildPresenters()
@@ -48,7 +38,7 @@ class SplitPresenter: NSObject, SplitPresenterProtocol {
     var viewController: UIViewController {
         
         get {
-
+            
             return splitView.viewController
         }
     }
@@ -57,6 +47,15 @@ class SplitPresenter: NSObject, SplitPresenterProtocol {
         
         splitView = view
         interactor = splitInteractor
+    }
+    
+    var selectedItem: ListPONSO? {
+        
+        didSet {
+            
+            self.interactor?.selectedItem = self.selectedItem
+            self.rebuildPresenters()
+        }
     }
 
     func rebuildPresenters() {

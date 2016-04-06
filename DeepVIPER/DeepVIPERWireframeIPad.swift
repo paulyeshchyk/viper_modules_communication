@@ -26,8 +26,6 @@ class DeepVIPERWireframeIPad: DeepVIPERWireframe {
 
         super.init(window:window)
         
-        detailModule.useCancelButton = true
-        
         splitModule.masterPresenter = listModule.presenter
         splitModule.detailPresenter = detailModule.presenter
         splitModule.emptyDetailPresenter = emptyDetailModule.presenter
@@ -41,7 +39,6 @@ class DeepVIPERWireframeIPad: DeepVIPERWireframe {
         
         listModule.addOutput = {() in
 
-            self.detailModule.useCancelButton = true
         }
 
         detailModule.saveOutput = {(ponso) in
